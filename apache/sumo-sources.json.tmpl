@@ -2,12 +2,12 @@
     "api.version": "v1",
     "sources": [{
         "sourceType": "LocalFile",
-        "name": "apache-collector-${LOG_APPLICATION}-access",
+        "name": "apache-collector-${LOG_APPLICATION}-${ENVIRONMENT}-access",
         "pathExpression": "/var/log/apache2/*_access.log",
         "multilineProcessingEnabled": false,
         "automaticDateParsing": true,
         "forceTimeZone": false,
-        "category": "${LOG_APPLICATION}/apache"
+        "category": "apache/${LOG_APPLICATION}/${ENVIRONMENT}"
     }, {
         "sourceType": "LocalFile",
         "name": "apache-collector-${LOG_APPLICATION}-app",
@@ -15,6 +15,6 @@
         "multilineProcessingEnabled": false,
         "automaticDateParsing": true,
         "forceTimeZone": false,
-        "category": "${LOG_APPLICATION}/app"
+        "category": "app/${LOG_APPLICATION}/${ENVIRONMENT}"
     }]
 }

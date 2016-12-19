@@ -2,8 +2,8 @@
   "api.version": "v1",
   "sources": [
         {
-            "name": "Docker-${LOG_APPLICATION}-logs",
-            "category": "${LOG_APPLICATION}/docker/logs",
+            "name": "Docker-${LOG_APPLICATION}-${ENVIRONMENT}-logs",
+            "category": "docker/logs/${LOG_APPLICATION}/${ENVIRONMENT}",
             "allContainers": true,
             "collectEvents": true,
             "uri": "unix:///var/run/docker.sock",
@@ -12,8 +12,8 @@
             "sourceType": "DockerLog"
         },
         {
-            "name": "Docker-${LOG_APPLICATION}-stats",
-            "category": "${LOG_APPLICATION}/docker/stats",
+            "name": "Docker-${LOG_APPLICATION}-${ENVIRONMENT}-stats",
+            "category": "docker/stats/${LOG_APPLICATION}/${ENVIRONMENT}",
             "automaticDateParsing": true,
             "forceTimeZone": false,
             "cutoffTimestamp": 0,

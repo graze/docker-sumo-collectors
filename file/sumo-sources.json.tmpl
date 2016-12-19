@@ -2,11 +2,11 @@
     "api.version": "v1",
     "sources": [{
         "sourceType": "LocalFile",
-        "name": "file-collector-${LOG_APPLICATION}",
+        "name": "file-collector-${LOG_APPLICATION}-${ENVIRONMENT}",
         "pathExpression": "/tmp/clogs/**",
         "multilineProcessingEnabled": false,
         "automaticDateParsing": true,
         "forceTimeZone": false,
-        "category": "${LOG_APPLICATION}/file"
+        "category": "logs/${LOG_APPLICATION}/${ENVIRONMENT}"
     }]
 }
