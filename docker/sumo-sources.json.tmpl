@@ -1,0 +1,28 @@
+{
+  "api.version": "v1",
+  "sources": [
+        {
+            "name": "Docker-${LOG_APPLICATION}-logs",
+            "category": "${LOG_APPLICATION}/docker/logs",
+            "allContainers": true,
+            "collectEvents": true,
+            "uri": "unix:///var/run/docker.sock",
+            "specifiedContainers": [],
+            "multilineProcessingEnabled": false,
+            "sourceType": "DockerLog"
+        },
+        {
+            "name": "Docker-${LOG_APPLICATION}-stats",
+            "category": "${LOG_APPLICATION}/docker/stats",
+            "automaticDateParsing": true,
+            "forceTimeZone": false,
+            "cutoffTimestamp": 0,
+            "uri": "unix:///var/run/docker.sock",
+            "specifiedContainers": [],
+            "allContainers": true,
+            "multilineProcessingEnabled": false,
+            "certPath": "",
+            "sourceType": "DockerStats"
+        }
+   ]
+}
