@@ -1,5 +1,7 @@
 # Sumologic Collector Templates
 
+![Giphy](https://media3.giphy.com/media/39jFTKBiaeo1O/giphy.gif)
+
 A set of sumologic collectors using templates
 
 ## Why?
