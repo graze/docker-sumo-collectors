@@ -31,6 +31,14 @@ The docker collector connects to the docker sock on the host machine and reports
 - logs -> category: `docker/logs/${LOG_APPLICATION}/${ENVIRONMENT}`
 - stats -> category: `docker/stats/${LOG_APPLICATION}/${ENVIRONMENT}`
 
+#### Docker logs
+
+image: `graze/sumo-collectors:docker-logs`
+
+A logs only collector for docker (does not send that stats stream to reduce the amount of log messages being sent)
+
+- logs -> category: `docker/logs/${LOG_APPLICATION}/${ENVIRONMENT}`
+
 ### File
 
 image: `graze/sumo-collectors:file`
