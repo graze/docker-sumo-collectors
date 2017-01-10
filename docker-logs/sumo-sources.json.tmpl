@@ -1,0 +1,15 @@
+{
+  "api.version": "v1",
+  "sources": [
+        {
+            "name": "Docker-${LOG_APPLICATION}-${ENVIRONMENT}-logs",
+            "category": "docker/logs/${LOG_APPLICATION}/${ENVIRONMENT}",
+            "allContainers": true,
+            "collectEvents": true,
+            "uri": "unix:///var/run/docker.sock",
+            "specifiedContainers": [],
+            "multilineProcessingEnabled": false,
+            "sourceType": "DockerLog"
+        }
+   ]
+}
